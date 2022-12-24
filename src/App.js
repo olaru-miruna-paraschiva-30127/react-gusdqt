@@ -1,0 +1,257 @@
+
+import React,{useState} from "react";
+import "./style.css";
+import {AiOutlineArrowLeft} from "react-icons/ai";
+import {AiOutlineArrowRight} from "react-icons/ai";
+import {BsCircle} from "react-icons/bs";
+import {MdPlayArrow} from "react-icons/md";
+import {CiTextAlignJustify} from "react-icons/ci";
+import {BsPlusSquare} from "react-icons/bs";
+import {BsFillPatchCheckFill} from "react-icons/bs";
+import OpenOnClick1 from "./OpenOnClick1";
+
+let j1=0;
+   let j2=0;
+   let j3=0;
+  
+   let r=0;
+   let g1=0;
+   let g2=0;
+   let g3=0;
+  
+export default function Page2() {
+   
+   let i=0;
+  
+  let r1=1;
+   let k1=false;
+   let k2=false;
+   let k3=false;
+   
+const [a, sA] = useState(true);
+   const [a1, sA1] = useState(true);
+   const [a2, sA2] = useState(true);
+   const [a3, sA3] = useState(true);
+   
+   const h = () => {
+      sA(!a);};
+  const h1 = () => {
+    sA1(!a1);};
+  
+  const h2 = () => {
+    sA2(!a2);
+   };
+  const h3 = () => {
+   sA3(!a3);
+  };
+ 
+  if(a1==false){k1=true; k2=false;  k3=false;  };
+  if(a2==false){k2=true; k1=false;k3=false; };
+  if(a3==false){k2=false; k1=false;k3=true; };
+  
+  
+  
+ if(k1==true){i=1; ;r=r+1;g1=g1+1;if(r>1){r=1;}};
+ if(k2==true){i=2;j1=1; ;r=r+1;g2=g2+1; if(r>2){r=2;}} ;
+ if(k3==true){i=3; j2=2; ;r=r+1 ;g3=g3+1;if(r>3){r=3;}};
+ 
+ if(r==3 ){r1=0;}
+  
+  return (
+    <div>
+       
+      <article style={{  
+    width:"100%",
+   height:'60px',
+   boxShadow: '1px 2px 9px lightgray',
+   justifyContent:'space-between',
+   display:'flex',
+    flex:1,
+   flexdirection:'row-reverse'
+  
+   }}>
+     <a href="https://react-hnjjf3.stackblitz.io/"  style={{ backgroundColor:'white',
+   border:'white',height:'20px',textDecoration: 'none'}} >
+       <div style={{display:'flex',
+    flex:1,
+   flexdirection:'row-reverse',
+   justifyContent:'space-between'}}><div style={{color:'rgb(127,0,255)'}}><AiOutlineArrowLeft/></div>&nbsp; <div style={{color:'black'}}>Back</div></div></a>
+  <div style={{fontWeight:'bold',fontSize:"25px"}}>Add New Internship</div>
+   <a style={{height:'25px',
+   color:r1==1?'gray':'white',
+   backgroundColor:r1==1?'rgb(230,231,243)':'rgb(127,0,255)',
+   border:r1==1?'rgb(230,231,243)':'rgb(127,0,255)',
+   borderRadius:'8px',
+   padding:'2px'
+  }} >
+       <div style={{display:'flex',
+    flex:1,
+   flexdirection:'row-reverse',
+   justifyContent:'space-between'}}> <div>Continue to Next Step</div>&nbsp;<div><AiOutlineArrowRight/> </div></div></a>
+        </article>
+       
+        <div style={{width:"100%",
+      backgroundColor:'rgb(230,231,243)',
+      border:'rgb(230,231,243)',
+     height:'80px'
+      }}>
+ </div>
+ 
+ <article style={{width:'100%',
+ height:'50px',
+ backgroundColor:'rgb(230,231,243)',
+ border:'1px solid lightgray',
+ justifyContent:'space-between',
+   display:'flex',
+    flex:1,
+   flexdirection:'row-reverse',
+   fontSize:"13px"
+}}>
+<div style={{color:'rgb(127,0,255)'}} ><BsCircle/>&nbsp;Internship Description</div>
+<div ><BsCircle/>&nbsp;Internship Guide</div>
+<div style={{color:'rgb(190,190,190)'}}><BsCircle/>&nbsp;Surveys</div>
+<div style={{color:'rgb(190,190,190)'}}><BsCircle/>&nbsp;Settings</div>
+</article>
+<div style={{width:"100%",
+      backgroundColor:'rgb(230,231,243)',
+      border:'rgb(230,231,243)',
+     height:'85px'
+      }}>
+ </div>
+<article style={{ float: 'left', width:'45%', backgroundColor:'rgb(230,231,243)',border:'1px solid rgb(230,231,243)',height:'660px'}}>
+<div style={{width:'100%'}}>
+  <div style={{width:'100%',height:'55px' ,justifyContent:'space-between',
+   display:'flex',
+    flex:1,
+   flexdirection:'row-reverse'}}><div><div style={{width:"100%",
+   backgroundColor:'rgb(230,231,243)',
+   border:'rgb(230,231,243)',
+  height:'20px'
+   }}>
+</div><CiTextAlignJustify/></div>&nbsp;&nbsp;<button 
+onClick={r==0?h1:h}
+style={{width:'100%',height:'55px',justifyContent:'space-between',
+   display:'flex',
+   padding:'18px',
+   flexdirection:'row-reverse',color:'black',
+   backgroundColor:'white',
+   border:i==1 ?'1px solid rgb(127,0,255)':'1px solid lightgray',
+   
+   borderRadius:'8px',
+   boxShadow: i==1?'1px 2px 9px gray':''
+   }}><div style={{display:'flex'}}><div>Overview</div>&nbsp;&nbsp;<div style={{visibility: j1==1  && g1>=1 && /*(*/g2>=1/* || ..)*/? 'visible' : 'hidden', color:'rgb(127,0,255)'}}><BsFillPatchCheckFill/></div></div><div style={{color:i==1?'rgb(127,0,255)':'gray'}}><MdPlayArrow/></div></button></div>
+
+<div style={{width:"100%",
+      backgroundColor:'rgb(230,231,243)',
+      border:'rgb(230,231,243)',
+     height:'15px'
+      }}>
+ </div>
+
+<div style={{width:'100%',height:'55px' ,justifyContent:'space-between',
+   display:'flex',
+    flex:1,
+   flexdirection:'row-reverse'}}><div><div style={{width:"100%",
+   backgroundColor:'rgb(230,231,243)',
+   border:'rgb(230,231,243)',
+  height:'20px'
+   }}>
+</div><CiTextAlignJustify/></div>&nbsp;&nbsp;<button
+onClick={r==1?h2:h}
+style={{width:'100%',height:'55px',justifyContent:'space-between',
+   display:'flex',
+   padding:'18px',
+   flexdirection:'row-reverse',color:'black',
+   backgroundColor:'white',
+   border: i==2 ?'1px solid rgb(127,0,255)':'1px solid lightgray',
+   boxShadow: i==2?'1px 2px 9px gray':'',
+   borderRadius:'8px'}}><div style={{display:'flex'}}><div>Schedule</div>&nbsp;&nbsp;<div style={{visibility: j2==2 && g2>=1 ? 'visible' : 'hidden', color:'rgb(127,0,255)'}}><BsFillPatchCheckFill/></div></div><div style={{color:i==2?'rgb(127,0,255)':'gray'}}><MdPlayArrow/></div></button></div>
+
+<div style={{width:"100%",
+      backgroundColor:'rgb(230,231,243)',
+      border:'rgb(230,231,243)',
+     height:'15px'
+      }}>
+ </div>
+
+<div style={{width:'100%',height:'55px' ,justifyContent:'space-between',
+   display:'flex',
+    flex:1,
+   flexdirection:'row-reverse'}}><div><div style={{width:"100%",
+   backgroundColor:'rgb(230,231,243)',
+   border:'rgb(230,231,243)',
+  height:'20px'
+   }}>
+</div><CiTextAlignJustify/></div>&nbsp;&nbsp;<button
+onClick={r==2?h3:h}
+style={{width:'100%',height:'55px',justifyContent:'space-between',
+   display:'flex',
+   padding:'18px',
+   flexdirection:'row-reverse',color:'black',
+   backgroundColor:'white',
+   border: i==3 ?'1px solid rgb(127,0,255)':'1px solid lightgray',
+   boxShadow: i==3?'1px 2px 9px gray':'',
+   borderRadius:'8px'}}><div style={{display:'flex'}}><div>Resources</div>&nbsp;&nbsp;<div style={{visibility: j3==3  ? 'visible' : 'hidden', color:'rgb(127,0,255)'}}><BsFillPatchCheckFill/></div></div><div style={{color:i==3?'rgb(127,0,255)':'gray'}}><MdPlayArrow/></div></button></div>
+
+<div style={{width:"100%",
+      backgroundColor:'rgb(230,231,243)',
+      border:'rgb(230,231,243)',
+     height:'15px'
+      }}>
+ </div>
+
+
+
+
+
+
+
+
+
+<div style={{width:'100%',height:'55px' ,justifyContent:'space-between',
+   display:'flex',
+    flex:1,
+   flexdirection:'row-reverse'}}>
+     <button  style={{width:'100%',height:'55px',
+   padding:'18px',
+  color:'rgb(127,0,255)',
+   backgroundColor:'rgb(204,204,255)',
+   border:'2px solid pink',
+   
+   borderRadius:'8px',borderColor:'rgb(127,0,255)'}}><BsPlusSquare/>&nbsp;&nbsp;&nbsp;Add Chapter</button></div>
+   
+   </div>
+   
+</article>
+<div >
+<article style={{ float: 'right', width:'55%', backgroundColor:'white',border:'1px solid white',height:'620px'}}>
+  <div style={{width:'100%'}}>
+   <div style={{width:'100%'}}>
+<div style={{fontWeight:'bold',fontSize:"22px"}}>Curated Resources</div>
+
+<br/>
+<OpenOnClick1/>
+</div> 
+<br/>
+<div style={{width:'100%'}}>
+<div style={{fontWeight:'bold',fontSize:"22px"}}>Events</div>
+
+<br/>
+<OpenOnClick1/>
+</div> 
+   </div>
+   </article>
+   </div>
+   
+    </div>
+  );
+
+  j1=0;
+    j2=0;
+   j3=0;
+   j4=0;
+  j5=0;
+ j6=0;
+    j7=0;
+    r=0;
+}
