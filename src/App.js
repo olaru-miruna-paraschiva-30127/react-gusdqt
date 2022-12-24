@@ -70,7 +70,7 @@ const [a, sA] = useState(true);
    flexdirection:'row-reverse'
   
    }}>
-     <a href="https://react-hnjjf3.stackblitz.io/"  style={{ backgroundColor:'white',
+     <a href="https://react-bjwxbv.stackblitz.io/"  style={{ backgroundColor:'white',
    border:'white',height:'20px',textDecoration: 'none'}} >
        <div style={{display:'flex',
     flex:1,
