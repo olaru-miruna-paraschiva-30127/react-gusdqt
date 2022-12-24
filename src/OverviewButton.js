@@ -3,9 +3,13 @@ import {MdPlayArrow} from "react-icons/md";
 import {CiTextAlignJustify} from "react-icons/ci";
 import {BsPlusSquare} from "react-icons/bs";
 import {BsFillPatchCheckFill} from "react-icons/bs";
+import {CiTextAlignJustify} from "react-icons/ci";
 export default function OverviewButton() {
   return (
-    <div>
+    <div style={{backgroundColor:'white',border:'1px solid rgb(127,0,255)',
+   
+    borderRadius:'8px',
+    boxShadow: '1px 2px 9px gray'}}>
      <button 
 onClick={}
 style={{width:'100%',height:'55px',justifyContent:'space-between',
@@ -13,11 +17,78 @@ style={{width:'100%',height:'55px',justifyContent:'space-between',
    padding:'18px',
    flexdirection:'row-reverse',color:'black',
    backgroundColor:'white',
-   border:'1px solid lightgray',
+   border:'1px solid white',
    
    borderRadius:'8px',
    boxShadow:''
-   }}><div style={{display:'flex'}}><div>Overview</div></div><div style={{color:'rgb(127,0,255)'}}><MdPlayArrow/></div></button>
+   }}><div style={{display:'flex'}}><div>Overview</div></div><div style={{color:'gray'}}><MdPlayArrow/></div></button>
+   <br/>
+   <div style={{
+   display:'flex',
+   
+   flexdirection:'row-reverse'}}>
+   <div style={{width:'10px'}}></div><button 
+onClick={}
+style={{width:'90%',height:'55px',justifyContent:'space-between',
+   display:'flex',
+   padding:'18px',
+   flexdirection:'row-reverse',color:'black',
+   backgroundColor:'white',
+   border:'1px solid lightgray',
+   
+   borderRadius:'20px',
+   boxShadow:''
+   }}><div style={{display:'flex'}}><CiTextAlignJustify/>&nbsp;&nbsp;<div>Brief</div></div></button></div>
+   <br/>
+   <div style={{
+   display:'flex',
+   
+   flexdirection:'row-reverse'}}>
+   <div style={{width:'10px'}}></div><button 
+onClick={}
+style={{width:'90%',height:'55px',justifyContent:'space-between',
+   display:'flex',
+   padding:'18px',
+   flexdirection:'row-reverse',color:'black',
+   backgroundColor:'white',
+   border:'1px solid lightgray',
+   
+   borderRadius:'20px',
+   boxShadow:''
+   }}><div style={{display:'flex'}}><CiTextAlignJustify/>&nbsp;&nbsp;<div>Requirements</div></div></button></div>
+   <br/>
+   <div style={{
+   display:'flex',
+   
+   flexdirection:'row-reverse'}}>
+   <div style={{width:'10px'}}></div><button 
+onClick={}
+style={{width:'90%',height:'55px',justifyContent:'space-between',
+   display:'flex',
+   padding:'18px',
+   flexdirection:'row-reverse',color:'black',
+   backgroundColor:'white',
+   border:'1px solid lightgray',
+   
+   borderRadius:'20px',
+   boxShadow:''
+   }}><div style={{display:'flex'}}><CiTextAlignJustify/>&nbsp;&nbsp;<div>Milestones</div></div></button></div>
+   <br/>
+   <div style={{
+   display:'flex',
+   
+   flexdirection:'row-reverse'}}>
+   <div style={{width:'10px'}}></div>
+   <button  style={{width:'90%',height:'55px',
+   padding:'18px',
+  color:'rgb(127,0,255)',
+   backgroundColor:'white',
+   border:'2px solid pink',
+   borderStyle:'dashed',
+   borderRadius:'20px',borderColor:'rgb(127,0,255)'}}><BsPlusSquare/>&nbsp;&nbsp;&nbsp;Add More</button></div>
+   <br/>
+   <br/>
+  
     </div>
   );
 }

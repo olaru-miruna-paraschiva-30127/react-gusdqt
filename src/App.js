@@ -9,7 +9,8 @@ import {CiTextAlignJustify} from "react-icons/ci";
 import {BsPlusSquare} from "react-icons/bs";
 import {BsFillPatchCheckFill} from "react-icons/bs";
 import OpenOnClick1 from "./OpenOnClick1";
-
+import OverviewButton from "./OverviewButton"
+import {BiAddToQueue} from "react-icons/bi";
 let j1=0;
    let j2=0;
    let j3=0;
@@ -120,7 +121,7 @@ const [a, sA] = useState(true);
  </div>
 <article style={{ float: 'left', width:'45%', backgroundColor:'rgb(230,231,243)',border:'1px solid rgb(230,231,243)',height:'660px'}}>
 <div style={{width:'100%'}}>
-  <div style={{width:'100%',height:'55px' ,justifyContent:'space-between',
+  <div style={{width:'100%',height:i==1?'410px':'55px' ,justifyContent:'space-between',
    display:'flex',
     flex:1,
    flexdirection:'row-reverse'}}><div><div style={{width:"100%",
@@ -128,18 +129,19 @@ const [a, sA] = useState(true);
    border:'rgb(230,231,243)',
   height:'20px'
    }}>
-</div><CiTextAlignJustify/></div>&nbsp;&nbsp;<button 
+</div><CiTextAlignJustify/></div>&nbsp;&nbsp;<div style={{width:'100%'}}><div style={{width:'100%',height:'100px'}}>{i==1?<OverviewButton/>:<button 
 onClick={r==0?h1:h}
 style={{width:'100%',height:'55px',justifyContent:'space-between',
    display:'flex',
    padding:'18px',
    flexdirection:'row-reverse',color:'black',
    backgroundColor:'white',
-   border:i==1 ?'1px solid rgb(127,0,255)':'1px solid lightgray',
+   border:false ?'1px solid rgb(127,0,255)':'1px solid lightgray',
    
    borderRadius:'8px',
-   boxShadow: i==1?'1px 2px 9px gray':''
-   }}><div style={{display:'flex'}}><div>Overview</div>&nbsp;&nbsp;<div style={{visibility: j1==1  && g1>=1 && /*(*/g2>=1/* || ..)*/? 'visible' : 'hidden', color:'rgb(127,0,255)'}}><BsFillPatchCheckFill/></div></div><div style={{color:i==1?'rgb(127,0,255)':'gray'}}><MdPlayArrow/></div></button></div>
+   boxShadow: false?'1px 2px 9px gray':''
+   }}><div style={{display:'flex'}}><div>Overview</div></div><div style={{color:i==1?'rgb(127,0,255)':'gray'}}><MdPlayArrow/></div></button>}</div></div>
+</div>
 
 <div style={{width:"100%",
       backgroundColor:'rgb(230,231,243)',
@@ -218,31 +220,39 @@ style={{width:'100%',height:'55px',justifyContent:'space-between',
    backgroundColor:'rgb(204,204,255)',
    border:'2px solid pink',
    
-   borderRadius:'8px',borderColor:'rgb(127,0,255)'}}><BsPlusSquare/>&nbsp;&nbsp;&nbsp;Add Chapter</button></div>
+   borderRadius:'8px',borderColor:'rgb(127,0,255)'}}><BiAddToQueue/>&nbsp;&nbsp;&nbsp;Add Chapter</button></div>
    
    </div>
    
 </article>
+{i==1?
 <div >
-<article style={{ float: 'right', width:'55%', backgroundColor:'white',border:'1px solid white',height:'620px'}}>
+<article style={{ float: 'right', width:'55%', backgroundColor:'white',border:'1px solid white',height:'840px'}}>
   <div style={{width:'100%'}}>
    <div style={{width:'100%'}}>
-<div style={{fontWeight:'bold',fontSize:"22px"}}>Curated Resources</div>
+<div style={{fontWeight:'bold',fontSize:"22px"}}>Brief</div>
 
 <br/>
 <OpenOnClick1/>
 </div> 
 <br/>
 <div style={{width:'100%'}}>
-<div style={{fontWeight:'bold',fontSize:"22px"}}>Events</div>
+<div style={{fontWeight:'bold',fontSize:"22px"}}>Requirements</div>
+
+<br/>
+<OpenOnClick1/>
+</div> 
+<br/>
+<div style={{width:'100%'}}>
+<div style={{fontWeight:'bold',fontSize:"22px"}}>Milestones</div>
 
 <br/>
 <OpenOnClick1/>
 </div> 
    </div>
    </article>
-   </div>
-   
+   </div>:''
+}
     </div>
   );
 
