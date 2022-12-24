@@ -10,6 +10,8 @@ import {BsPlusSquare} from "react-icons/bs";
 import {BsFillPatchCheckFill} from "react-icons/bs";
 import OpenOnClick1 from "./OpenOnClick1";
 import OverviewButton from "./OverviewButton"
+import Button2 from "./Button2"
+import Button3 from "./Button3"
 import {BiAddToQueue} from "react-icons/bi";
 let j1=0;
    let j2=0;
@@ -150,7 +152,7 @@ style={{width:'100%',height:'55px',justifyContent:'space-between',
       }}>
  </div>
 
-<div style={{width:'100%',height:'55px' ,justifyContent:'space-between',
+ <div style={{width:'100%',height:i==2?'410px':'55px' ,justifyContent:'space-between',
    display:'flex',
     flex:1,
    flexdirection:'row-reverse'}}><div><div style={{width:"100%",
@@ -158,16 +160,20 @@ style={{width:'100%',height:'55px',justifyContent:'space-between',
    border:'rgb(230,231,243)',
   height:'20px'
    }}>
-</div><CiTextAlignJustify/></div>&nbsp;&nbsp;<button
+</div><CiTextAlignJustify/></div>&nbsp;&nbsp;<div style={{width:'100%'}}><div style={{width:'100%',height:'100px'}}>{i==2?<Button2/>:<button 
 onClick={r==1?h2:h}
 style={{width:'100%',height:'55px',justifyContent:'space-between',
    display:'flex',
    padding:'18px',
    flexdirection:'row-reverse',color:'black',
    backgroundColor:'white',
-   border: i==2 ?'1px solid rgb(127,0,255)':'1px solid lightgray',
-   boxShadow: i==2?'1px 2px 9px gray':'',
-   borderRadius:'8px'}}><div style={{display:'flex'}}><div>Schedule</div>&nbsp;&nbsp;<div style={{visibility: j2==2 && g2>=1 ? 'visible' : 'hidden', color:'rgb(127,0,255)'}}><BsFillPatchCheckFill/></div></div><div style={{color:i==2?'rgb(127,0,255)':'gray'}}><MdPlayArrow/></div></button></div>
+   border:'1px solid lightgray',
+   
+   borderRadius:'8px',
+   
+   }}><div style={{display:'flex'}}><div>Schedule</div></div><div style={{color:'gray'}}><MdPlayArrow/></div></button>}</div></div>
+</div>
+
 
 <div style={{width:"100%",
       backgroundColor:'rgb(230,231,243)',
@@ -176,7 +182,7 @@ style={{width:'100%',height:'55px',justifyContent:'space-between',
       }}>
  </div>
 
-<div style={{width:'100%',height:'55px' ,justifyContent:'space-between',
+ <div style={{width:'100%',height:i==3?'410px':'55px' ,justifyContent:'space-between',
    display:'flex',
     flex:1,
    flexdirection:'row-reverse'}}><div><div style={{width:"100%",
@@ -184,16 +190,19 @@ style={{width:'100%',height:'55px',justifyContent:'space-between',
    border:'rgb(230,231,243)',
   height:'20px'
    }}>
-</div><CiTextAlignJustify/></div>&nbsp;&nbsp;<button
+</div><CiTextAlignJustify/></div>&nbsp;&nbsp;<div style={{width:'100%'}}><div style={{width:'100%',height:'100px'}}>{i==3?<Button3/>:<button 
 onClick={r==2?h3:h}
 style={{width:'100%',height:'55px',justifyContent:'space-between',
    display:'flex',
    padding:'18px',
    flexdirection:'row-reverse',color:'black',
    backgroundColor:'white',
-   border: i==3 ?'1px solid rgb(127,0,255)':'1px solid lightgray',
-   boxShadow: i==3?'1px 2px 9px gray':'',
-   borderRadius:'8px'}}><div style={{display:'flex'}}><div>Resources</div>&nbsp;&nbsp;<div style={{visibility: j3==3  ? 'visible' : 'hidden', color:'rgb(127,0,255)'}}><BsFillPatchCheckFill/></div></div><div style={{color:i==3?'rgb(127,0,255)':'gray'}}><MdPlayArrow/></div></button></div>
+   border:'1px solid lightgray',
+   
+   borderRadius:'8px',
+   
+   }}><div style={{display:'flex'}}><div>Schedule</div></div><div style={{color:'gray'}}><MdPlayArrow/></div></button>}</div></div>
+</div>
 
 <div style={{width:"100%",
       backgroundColor:'rgb(230,231,243)',
@@ -249,6 +258,60 @@ style={{width:'100%',height:'55px',justifyContent:'space-between',
 <br/>
 <OpenOnClick1/>
 </div> 
+   </div>
+   </article>
+   </div>:''
+}
+
+
+{i==2?
+<div >
+<article style={{ float: 'right', width:'55%', backgroundColor:'white',border:'1px solid white',height:'840px'}}>
+  <div style={{width:'100%'}}>
+   <div style={{width:'100%'}}>
+<div style={{fontWeight:'bold',fontSize:"22px"}}>Duration</div>
+
+<br/>
+<OpenOnClick1/>
+</div> 
+<br/>
+<div style={{width:'100%'}}>
+<div style={{fontWeight:'bold',fontSize:"22px"}}>Timeline</div>
+
+<br/>
+<OpenOnClick1/>
+</div> 
+<br/>
+<div style={{width:'100%'}}>
+<div style={{fontWeight:'bold',fontSize:"22px"}}>Deliverables</div>
+
+<br/>
+<OpenOnClick1/>
+</div> 
+   </div>
+   </article>
+   </div>:''
+}
+
+{i==3?
+<div >
+<article style={{ float: 'right', width:'55%', backgroundColor:'white',border:'1px solid white',height:'600px'}}>
+  <div style={{width:'100%'}}>
+   <div style={{width:'100%'}}>
+<div style={{fontWeight:'bold',fontSize:"22px"}}>Curated Resources</div>
+
+<br/>
+<OpenOnClick1/>
+</div> 
+<br/>
+<div style={{width:'100%'}}>
+<div style={{fontWeight:'bold',fontSize:"22px"}}>Events</div>
+
+<br/>
+<OpenOnClick1/>
+</div> 
+<br/>
+
    </div>
    </article>
    </div>:''

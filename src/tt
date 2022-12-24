@@ -1,0 +1,18 @@
+<div style={{width:'100%',height:i==2?'410':'55px' ,justifyContent:'space-between',
+   display:'flex',
+    flex:1,
+   flexdirection:'row-reverse'}}><div><div style={{width:"100%",
+   backgroundColor:'rgb(230,231,243)',
+   border:'rgb(230,231,243)',
+  height:'20px'
+   }}>
+</div><CiTextAlignJustify/></div>&nbsp;&nbsp;<div  style={{width:'100%',height:i==2?'410':'55px' }}>{i==2?<Button2/>:<button
+onClick={r==1?h2:h}
+style={{width:'100%',height:'55px',justifyContent:'space-between',
+   display:'flex',
+   padding:'18px',
+   flexdirection:'row-reverse',color:'black',
+   backgroundColor:'white',
+   border: i==2 ?'1px solid rgb(127,0,255)':'1px solid lightgray',
+   boxShadow: i==2?'1px 2px 9px gray':'',
+   borderRadius:'8px'}}><div style={{display:'flex'}}><div>Schedule</div>&nbsp;&nbsp;<div style={{visibility: j2==2 && g2>=1 ? 'visible' : 'hidden', color:'rgb(127,0,255)'}}><BsFillPatchCheckFill/></div></div><div style={{color:i==2?'rgb(127,0,255)':'gray'}}><MdPlayArrow/></div></button>}</div></div>
